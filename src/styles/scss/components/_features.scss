@@ -1,0 +1,50 @@
+// Features section styles
+.features {
+  padding: 4rem 0;
+  background-color: #fff; // 特徴セクションの背景色
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .feature-item {
+    background-color: #f8f9fa; // 個々の特徴アイテムの背景色
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      // アイコンの色やスタイルを調整
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+} 
