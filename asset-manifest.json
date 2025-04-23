@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/eternaltalk-hp/static/css/main.ab55b76b.css",
-    "main.js": "/eternaltalk-hp/static/js/main.02417b35.js",
-    "static/media/logo.png": "/eternaltalk-hp/static/media/logo.2551382d9a690ee93507.png",
-    "index.html": "/eternaltalk-hp/index.html",
-    "main.ab55b76b.css.map": "/eternaltalk-hp/static/css/main.ab55b76b.css.map",
-    "main.02417b35.js.map": "/eternaltalk-hp/static/js/main.02417b35.js.map"
+    "main.css": "/static/css/main.ab55b76b.css",
+    "main.js": "/static/js/main.0c2567a6.js",
+    "static/media/logo.png": "/static/media/logo.2551382d9a690ee93507.png",
+    "index.html": "/index.html",
+    "main.ab55b76b.css.map": "/static/css/main.ab55b76b.css.map",
+    "main.0c2567a6.js.map": "/static/js/main.0c2567a6.js.map"
   },
   "entrypoints": [
     "static/css/main.ab55b76b.css",
-    "static/js/main.02417b35.js"
+    "static/js/main.0c2567a6.js"
   ]
 }
