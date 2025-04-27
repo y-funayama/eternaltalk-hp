@@ -1,0 +1,38 @@
+@import '../base/variables';
+
+.header {
+  background-color: $color-background-dark; // Dark background
+  padding: 1rem 0;
+  border-bottom: 1px solid $color-grey-medium; // Add a subtle border like in the app?
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 35px; // Adjust logo size if needed
+    // filter: brightness(0) invert(1); // Uncomment if logo needs to be white
+  }
+
+  // Nav styles removed or updated if needed
+
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+
+    // Use general .btn styles from _base.scss
+    // Overrides can be added here if necessary
+    // Example: Make primary button use yellow accent?
+    // .btn-primary {
+    //   background-color: $color-accent-yellow;
+    // }
+  }
+} 

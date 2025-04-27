@@ -1,0 +1,22 @@
+@import '../base/variables';
+
+.footer {
+  background-color: $color-accent-beige; // Light beige background
+  color: $color-text-dark; // Dark text for contrast
+  padding: 2rem 0;
+  margin-top: 5rem; // Increase spacing
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  // Removed nav styles as they are not in the app footer design
+} 

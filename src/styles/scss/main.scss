@@ -1,0 +1,9 @@
+// Base styles
+@import 'base/variables'; // Import variables first
+@import 'base/base';
+
+// Component styles
+@import 'components/header';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/footer'; 

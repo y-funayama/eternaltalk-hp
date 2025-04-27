@@ -1,0 +1,58 @@
+@import '../base/variables';
+
+.features {
+  padding: 4rem 0;
+  background-color: $color-background-dark; // Match body background or use secondary dark
+  color: $color-text-light; // Ensure text is light
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3.5rem;
+    // color: $color-text-light; // Inherited
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Slightly larger items
+    gap: 2.5rem;
+    text-align: left;
+  }
+
+  .feature-item {
+    background-color: $color-background-dark-secondary; // Card background
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Optional subtle shadow for dark theme
+    border: 1px solid $color-grey-medium; // Add border
+
+    .feature-icon {
+      font-size: 1.8rem; // Adjust size
+      margin-bottom: 1rem;
+      color: $color-accent-yellow; // Use accent color for icon placeholder
+      // Placeholder text instead of emoji:
+      &:before {
+        content: "[Icon]";
+        font-weight: bold;
+      }
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: $color-text-light;
+    }
+
+    p {
+      color: $color-text-grey;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+} 

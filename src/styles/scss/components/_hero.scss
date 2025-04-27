@@ -1,0 +1,36 @@
+@import '../base/variables';
+
+.hero {
+  background-color: $color-background-dark-secondary; // Slightly lighter dark background
+  padding: 5rem 0;
+  text-align: center;
+  color: $color-text-light; // Ensure text is light
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      // color: $color-text-light; // Inherited from .hero
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      color: $color-text-grey; // Use slightly grey text for paragraph
+    }
+
+    // Use general .btn styles from _base.scss
+    // .btn-primary {
+    //   padding: 1rem 2.5rem;
+    //   font-size: 1.2rem;
+    // }
+  }
+
+  // Hero image styling removed for now
+} 
