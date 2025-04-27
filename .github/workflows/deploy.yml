@@ -34,7 +34,7 @@ jobs:
           cache: 'npm' # npm のキャッシュを有効化
 
       - name: Install dependencies
-        run: npm install # 依存関係をインストール
+        run: npm ci # npm install の代わりに npm ci を使用
 
       - name: Build
         run: npm run build # アプリケーションをビルド
