@@ -1,0 +1,57 @@
+# GitHub Pages デプロイ用ワークフロー
+
+name: Deploy GitHub Pages
+
+# トリガー: main ブランチへの push 時に実行
+on:
+  push:
+    branches:
+      - main # main ブランチを監視
+
+# ワークフロー実行に必要な権限を設定
+permissions:
+  contents: read
+  pages: write # pages に書き込む権限
+  id-token: write # OIDC トークンを要求する権限
+
+# デプロイメントの並列実行を許可しない設定
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # ビルドジョブ
+  build:
+    runs-on: ubuntu-latest # 実行環境
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # リポジトリのコードをチェックアウト
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4 # Node.js 環境をセットアップ
+        with:
+          node-version: '18' # 使用するNode.jsのバージョン (適宜変更可)
+          cache: 'npm' # npm のキャッシュを有効化
+
+      - name: Install dependencies
+        run: npm install # 依存関係をインストール
+
+      - name: Build
+        run: npm run build # アプリケーションをビルド
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3 # ビルド成果物 (build フォルダ) をアップロード
+        with:
+          path: './build' # アップロードするディレクトリ
+
+  # デプロイジョブ
+  deploy:
+    needs: build # build ジョブの完了後に実行
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # デプロイ先のURLを環境変数に設定
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # GitHub Pages にデプロイ 
