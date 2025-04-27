@@ -1,8 +1,11 @@
+@import '../base/variables'; // Import variables
+
 // Header styles
 .header {
-  background-color: #fff; // ヘッダーの背景色
+  background-color: $color-background-dark; // Dark background
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $color-grey-medium; // Add a subtle border
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Remove shadow for dark theme?
 
   .container {
     max-width: 1140px;
@@ -17,35 +20,21 @@
   }
 
   .logo {
-    height: 40px; // ロゴの高さ
+    height: 35px; // Adjust logo size
+    // filter: brightness(0) invert(1); // Make logo white if needed
   }
 
+  // Remove specific nav styles as nav is removed from Header.tsx
   nav {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1.5rem;
-
-      li {
-        a {
-          text-decoration: none;
-          color: #333; // ナビゲーションリンクの色
-          font-weight: 500;
-
-          &:hover {
-            color: #007bff; // ホバー時の色
-          }
-        }
-      }
-    }
+    display: none; // Hide nav if commented out in TSX
   }
 
   .auth-buttons {
     display: flex;
     gap: 1rem;
-
+    // Rely on base styles .btn, .btn-primary, .btn-secondary
+    // Remove specific button styles below
+    /*
     .btn {
       padding: 0.5rem 1rem;
       border: none;
@@ -56,22 +45,21 @@
     }
 
     .btn-primary {
-      background-color: #007bff; // プライマリボタンの背景色
+      background-color: #007bff;
       color: white;
-
       &:hover {
         background-color: #0056b3;
       }
     }
 
     .btn-secondary {
-      background-color: #f8f9fa; // セカンダリボタンの背景色
+      background-color: #f8f9fa;
       color: #333;
       border: 1px solid #ddd;
-
       &:hover {
         background-color: #e2e6ea;
       }
     }
+    */
   }
 } 

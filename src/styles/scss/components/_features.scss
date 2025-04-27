@@ -1,7 +1,10 @@
+@import '../base/variables'; // Import variables
+
 // Features section styles
 .features {
   padding: 4rem 0;
-  background-color: #fff; // 特徴セクションの背景色
+  background-color: $color-background-dark; // Match body background
+  color: $color-text-light; // Ensure text is light
 
   .container {
     max-width: 1140px;
@@ -11,40 +14,48 @@
   }
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 3.5rem;
+    // color: $color-text-light; // Inherited
   }
 
   .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Slightly larger items
+    gap: 2.5rem;
     text-align: left;
   }
 
   .feature-item {
-    background-color: #f8f9fa; // 個々の特徴アイテムの背景色
-    padding: 2rem;
+    background-color: $color-background-dark-secondary; // Card background
+    padding: 2rem 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Optional subtle shadow for dark theme
+    border: 1px solid $color-grey-medium; // Add border
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); // Remove light theme shadow
 
     .feature-icon {
-      font-size: 2rem;
+      font-size: 1.8rem; // Adjust size
       margin-bottom: 1rem;
-      // アイコンの色やスタイルを調整
+      color: $color-accent-yellow; // Use accent color for icon placeholder
+      // Placeholder text instead of emoji:
+      &:before {
+        content: "[Icon]"; // Placeholder text
+        font-weight: bold;
+        display: block; // Ensure it takes space
+      }
     }
 
     h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #333;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: $color-text-light;
     }
 
     p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      color: $color-text-grey;
+      font-size: 1rem;
+      line-height: 1.7;
     }
   }
 } 
