@@ -1,6 +1,6 @@
-// Base styles (optional, can be added later)
-// @import 'base/variables';
-// @import 'base/base';
+// Base styles
+@import 'base/variables'; // Import variables first
+@import 'base/base';
 
 // Component styles
 @import 'components/header';

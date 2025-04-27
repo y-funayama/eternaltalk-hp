@@ -1,9 +1,11 @@
+@import '../base/variables'; // Import variables
+
 // Footer styles
 .footer {
-  background-color: #343a40; // フッターの背景色
-  color: #f8f9fa; // フッターのテキスト色
+  background-color: $color-accent-beige; // Light beige background from app footer
+  color: $color-text-dark; // Dark text for contrast
   padding: 2rem 0;
-  margin-top: 4rem; // 上のセクションとの間にマージンを設定
+  margin-top: 5rem; // Increase spacing
 
   .container {
     max-width: 1140px;
@@ -14,21 +16,23 @@
 
   p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
-  // 必要であればナビゲーションリンクのスタイルを追加
+  // Remove nav styles as they are not in the app footer design
   nav {
+    display: none;
+    /*
     margin-top: 0.5rem;
     a {
-      color: #adb5bd; // フッターリンクの色
+      color: #adb5bd;
       text-decoration: none;
       margin: 0 0.5rem;
-
       &:hover {
         color: #f8f9fa;
         text-decoration: underline;
       }
     }
+    */
   }
 } 
